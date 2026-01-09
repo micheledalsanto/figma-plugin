@@ -805,8 +805,11 @@ async function generate(opts: GenerateOptions): Promise<void> {
 
       // Delete temp page after creating first real page
       if (tempPageToDelete) {
+        // CRITICAL: Switch to the new real page BEFORE deleting temp page
+        figma.currentPage = page;
         tempPageToDelete.remove();
         tempPageToDelete = null;
+        console.log("Temp page deleted, now on:", page.name);
       }
     }
 
@@ -883,10 +886,17 @@ async function generate(opts: GenerateOptions): Promise<void> {
 
   // Clean up temp page if it still exists (shouldn't happen, but safety check)
   if (tempPageToDelete && !tempPageToDelete.removed) {
+    console.warn("Temp page still exists at end - this shouldn't happen");
     try {
+      // Make sure we're not on the temp page before removing it
+      const coverPage = findPageByName("🌟 00 — Cover");
+      if (coverPage) {
+        figma.currentPage = coverPage;
+      }
       tempPageToDelete.remove();
+      console.log("Cleaned up lingering temp page");
     } catch (e) {
-      // Ignore if already removed
+      console.warn("Could not remove temp page:", e);
     }
   }
 
