@@ -699,6 +699,10 @@ function deleteAllPages(): { tempPage: PageNode } {
   const tempPage = figma.createPage();
   tempPage.name = "🗑️ Temporary (will be deleted)";
 
+  // CRITICAL: Switch to temp page BEFORE deleting others
+  // (cannot delete the currently active page)
+  figma.currentPage = tempPage;
+
   const pagesToDelete = figma.root.children.filter(
     (child) => child.type === "PAGE" && child.id !== tempPage.id
   );
