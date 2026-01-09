@@ -370,22 +370,19 @@ This is a standalone plugin. Feel free to fork and customize for your workflow.
 ## Changelog
 
 ### v1.2.0 (2026-01-09)
-- **NEW**: Comprehensive, structured placeholders with real-world examples
-- **NEW**: Each section includes actionable guidance and best practices
-- **IMPROVED**: Placeholder content increased from ~500 to ~5000+ characters per section
-- **IMPROVED**: Mix of `[BRACKETED]` customizable fields + concrete examples
-- **IMPROVED**: Cover includes complete project metadata template
-- **IMPROVED**: Brief includes audience breakdown, scope, and constraints
-- **IMPROVED**: Problem & Insights with symptoms, root causes, and 💡 insights format
-- **IMPROVED**: Strategy with 5 design principles and risk mitigation
-- **IMPROVED**: Visual Direction with color strategy, typography rationale, DO/DON'T rules
-- **IMPROVED**: IA/Flow with step-by-step journey, edge cases, and assumptions
-- **IMPROVED**: Design System with complete typography scale, spacing system, motion principles
-- **IMPROVED**: Screens section with recommended structure and presentation tips
-- **IMPROVED**: Prototype Notes with interaction details, testing checklist, known limitations
-- **IMPROVED**: Results with outcomes, what worked/didn't, trade-offs, learnings, next steps
-- **FORMAT**: All placeholders use consistent emoji markers (✅ ❌ ⚠️ 💡 🔹 etc.)
-- **SIZE**: Plugin size increased from 14KB to 35KB due to rich content
+- **NEW**: Professional plugin icon with document/case study visual metaphor
+- **NEW**: Enhanced placeholder content with realistic fintech app examples
+- **NEW**: Cover page now includes quantitative impact metrics (50k+ users, $2.3M saved)
+- **NEW**: Brief section with specific target audience and measurable success criteria
+- **NEW**: Problem & Insights section with behavioral psychology insights and emoji-coded findings
+- **IMPROVED**: All placeholders now use realistic, industry-specific examples instead of generic templates
+- **IMPROVED**: Added emoji visual hierarchy (📈📉💡🎯✨🤖⚡) for better content organization
+- **IMPROVED**: Fixed page deletion bug that prevented temp page cleanup
+- **IMPROVED**: Safer page deletion with error handling and validation
+- **IMPROVED**: Menu command integration for better plugin UX
+- **FORMAT**: Consistent emoji markers throughout (✅ ❌ ⚠️ 💡 📈 etc.)
+- **CONTENT**: Placeholders now tell a cohesive story of a fintech savings app
+- **SIZE**: Plugin size increased to 38KB due to rich, realistic content
 
 ### v1.1.0 (2026-01-09)
 - **NEW**: Page separators using Figma's native divider API (En-dash/Em-dash/Asterisk/None)

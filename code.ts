@@ -39,19 +39,24 @@ const SECTIONS = (projectTitle: string, projectType: string): Section[] => [
     boardName: "Cover Board",
     heading: projectTitle,
     placeholder:
-      `[One compelling sentence that captures the essence and impact of this project]\n\n` +
+      `A revolutionary fintech app that helped 50,000+ users save $2.3M through intelligent automation and behavioral design.\n\n` +
       `PROJECT INFO\n` +
       `Type: ${projectType}\n` +
-      `Role: [e.g., Product Designer, UX/UI Lead, Design Consultant]\n` +
-      `Team: [Solo / Team of X / Agency name]\n` +
-      `Year: [2024]\n` +
-      `Duration: [e.g., 3 months, 6 weeks]\n` +
-      `Platform: [Web, iOS, Android, Cross-platform]\n\n` +
+      `Role: Lead Product Designer\n` +
+      `Team: 3 designers, 4 developers, 1 PM\n` +
+      `Year: 2024\n` +
+      `Duration: 4 months (MVP + iteration)\n` +
+      `Platform: iOS, Android, Web Dashboard\n\n` +
+      `IMPACT\n` +
+      `📈 +127% user savings rate vs. traditional methods\n` +
+      `⭐ 4.8/5 App Store rating (2,400+ reviews)\n` +
+      `🏆 Featured in Apple's "Apps We Love"\n` +
+      `💰 $2.3M+ total user savings in first 6 months\n\n` +
       `LINKS\n` +
-      `→ [Live Prototype]\n` +
-      `→ [Case Study]\n` +
-      `→ [GitHub / Source]\n\n` +
-      `Add hero image placeholder above (replace with actual design mockup)`,
+      `→ Live Prototype (interactive demo)\n` +
+      `→ App Store / Play Store\n` +
+      `→ Design System Documentation\n\n` +
+      `🖼️ Replace with hero mockup showing your app's key screens`,
     isCover: true,
     separatorAfter: true
   },
@@ -62,31 +67,43 @@ const SECTIONS = (projectTitle: string, projectType: string): Section[] => [
     heading: "Brief",
     placeholder:
       `GOAL\n` +
-      `[What is this project trying to achieve? What does success look like?]\n` +
-      `Example: Create a mobile-first budgeting app that helps millennials save 20% more per month through behavioral nudges and automated savings.\n\n` +
+      `Create an intuitive savings app that helps young professionals effortlessly save 25% more money through intelligent automation and positive behavioral psychology.\n\n` +
+      `🎯 SUCCESS METRICS\n` +
+      `• 80%+ user activation (set up first automated rule)\n` +
+      `• $500+ average monthly savings per active user\n` +
+      `• 4.5+ App Store rating with 90%+ positive sentiment\n` +
+      `• 60%+ monthly retention after 6 months\n\n` +
       `TARGET AUDIENCE\n` +
-      `Primary: [e.g., Millennials aged 25-35, urban professionals, tech-savvy]\n` +
-      `Secondary: [e.g., Small business owners, freelancers]\n` +
-      `Behaviors: [e.g., Use mobile banking daily, struggle with manual budgeting]\n` +
-      `Pain points: [e.g., Feel overwhelmed by financial decisions, lack visibility into spending patterns]\n\n` +
-      `CONTEXT & BACKGROUND\n` +
-      `[Why does this project exist? What triggered it?]\n` +
-      `• Market opportunity: [e.g., 73% of millennials live paycheck-to-paycheck]\n` +
-      `• Business goal: [e.g., Enter the fintech market with a differentiated product]\n` +
-      `• User need: [e.g., Existing tools are too complex or too simplistic]\n\n` +
+      `Primary: Tech-savvy millennials (25-35)\n` +
+      `• $50K-$120K annual income\n` +
+      `• Live in major cities (SF, NYC, Seattle, Austin)\n` +
+      `• Use 3+ financial apps but struggle with consistency\n` +
+      `• Value convenience over manual control\n\n` +
+      `Pain points:\n` +
+      `💸 "I make good money but somehow never save"\n` +
+      `😰 Budgeting feels overwhelming and judgmental\n` +
+      `🔄 Start saving plans but abandon them within weeks\n` +
+      `📊 Can't visualize long-term financial progress\n\n` +
+      `MARKET CONTEXT\n` +
+      `• 78% of millennials live paycheck-to-paycheck despite rising incomes\n` +
+      `• Current solutions: too rigid (Mint) or too gamified (Acorns)\n` +
+      `• Opportunity: "Set and forget" savings with smart defaults\n` +
+      `• Competitive advantage: Behavioral psychology + superior UX\n\n` +
       `SCOPE\n` +
-      `In scope:\n` +
-      `• [Feature/capability 1]\n` +
-      `• [Feature/capability 2]\n` +
-      `• [Feature/capability 3]\n\n` +
-      `Out of scope (for v1):\n` +
-      `• [Deferred feature 1]\n` +
-      `• [Deferred feature 2]\n\n` +
+      `✅ In scope (MVP):\n` +
+      `• Automated savings rules based on spending patterns\n` +
+      `• Goal tracking with progress visualization\n` +
+      `• Smart categorization and insights\n` +
+      `• Bank integration (Plaid API)\n\n` +
+      `❌ Out of scope (v2+):\n` +
+      `• Investment recommendations\n` +
+      `• Bill payment automation\n` +
+      `• Credit score monitoring\n\n` +
       `CONSTRAINTS\n` +
-      `Timeline: [e.g., 3-month MVP deadline]\n` +
-      `Budget: [e.g., Limited to 2 designers, 3 developers]\n` +
-      `Technical: [e.g., Must integrate with Plaid API, work offline]\n` +
-      `Business: [e.g., Must comply with financial regulations, target $X revenue by Q4]`,
+      `⏰ Timeline: 16-week MVP (design 4w, dev 10w, testing 2w)\n` +
+      `💰 Budget: 2 designers, 3 developers, $180K total\n` +
+      `🔧 Technical: iOS 15+, Android 10+, Plaid integration required\n` +
+      `📋 Compliance: Must meet PCI DSS standards, SOC 2 certification`,
     isCover: false,
     separatorAfter: false
   },
@@ -97,34 +114,44 @@ const SECTIONS = (projectTitle: string, projectType: string): Section[] => [
     heading: "Problem & Insights",
     placeholder:
       `PROBLEM STATEMENT\n` +
-      `[One clear sentence defining the core problem]\n` +
-      `Example: Young professionals want to save money but lack the time and knowledge to create effective budgets, resulting in anxiety and poor financial outcomes.\n\n` +
-      `SYMPTOMS (What users experience)\n` +
-      `• [Observable behavior 1 — e.g., Users abandon budgeting apps after 2 weeks]\n` +
-      `• [Observable behavior 2 — e.g., 65% of users report feeling stressed about money]\n` +
-      `• [Observable behavior 3 — e.g., Manual tracking takes 30+ minutes per week]\n` +
-      `• [Impact metric — e.g., Only 12% meet their savings goals]\n\n` +
-      `ROOT CAUSES (Why it happens)\n` +
+      `Young professionals earn good money but struggle to save consistently due to complex budgeting tools and lack of automated systems, leading to financial stress and missed long-term goals.\n\n` +
+      `📉 SYMPTOMS (What we observed)\n` +
+      `• 89% abandon budgeting apps within 3 weeks of download\n` +
+      `• 67% report feeling "financially behind" despite stable income\n` +
+      `• Manual expense tracking takes 45+ minutes per week\n` +
+      `• Only 23% of users achieve their stated savings goals\n` +
+      `• 78% check banking apps daily but still overspend\n\n` +
+      `🧠 ROOT CAUSES (Why it happens)\n` +
       `Behavioral:\n` +
-      `• [e.g., Budgeting feels like punishment, not empowerment]\n` +
-      `• [e.g., Delayed gratification is psychologically difficult]\n\n` +
+      `• Budgeting feels restrictive, like a "financial diet"\n` +
+      `• Instant gratification vs. delayed savings creates decision fatigue\n` +
+      `• No positive feedback loop for good financial behavior\n\n` +
       `Systemic:\n` +
-      `• [e.g., Existing tools require too much manual input]\n` +
-      `• [e.g., Financial literacy is not taught in schools]\n\n` +
+      `• Existing tools require too much cognitive overhead\n` +
+      `• Financial education happens after bad habits form\n` +
+      `• Social pressure to spend conflicts with saving goals\n\n` +
       `Technical:\n` +
-      `• [e.g., Banks don't expose real-time spending data]\n` +
-      `• [e.g., Categorization is inaccurate and requires constant fixing]\n\n` +
-      `KEY INSIGHTS (What we learned)\n` +
-      `💡 Insight #1: [e.g., Users don't want to budget — they want to feel in control without thinking about it]\n` +
-      `   → Implication: Automate everything possible; make savings invisible\n\n` +
-      `💡 Insight #2: [e.g., Small wins build momentum better than big goals]\n` +
-      `   → Implication: Celebrate micro-achievements; show daily progress\n\n` +
-      `💡 Insight #3: [e.g., Shame prevents people from engaging with finances]\n` +
-      `   → Implication: Non-judgmental tone; focus on forward progress, not past mistakes\n\n` +
-      `OPPORTUNITIES (What we'll focus on)\n` +
-      `✓ [Opportunity area 1 — e.g., Automated savings without user effort]\n` +
-      `✓ [Opportunity area 2 — e.g., Positive reinforcement over guilt]\n` +
-      `✓ [Opportunity area 3 — e.g., AI-powered categorization that just works]`,
+      `• Bank APIs don't provide real-time spending context\n` +
+      `• Auto-categorization is 60% accurate at best\n` +
+      `• No seamless integration between checking and savings\n\n` +
+      `💡 KEY INSIGHTS (Research findings)\n` +
+      `Insight #1: "I don't want to budget, I want to feel rich"\n` +
+      `   → Users want abundance mindset, not scarcity\n` +
+      `   → Design for celebration, not restriction\n\n` +
+      `Insight #2: "Small progress beats perfect plans"\n` +
+      `   → $5 saved daily feels better than $150 monthly goal\n` +
+      `   → Show micro-wins with immediate gratification\n\n` +
+      `Insight #3: "Shame kills financial motivation"\n` +
+      `   → Never show negative language or red warnings\n` +
+      `   → Frame setbacks as learning opportunities\n\n` +
+      `Insight #4: "Automation needs human touch"\n` +
+      `   → 100% automation feels out of control\n` +
+      `   → Provide simple, one-tap adjustments\n\n` +
+      `🎯 OPPORTUNITIES (Where we'll win)\n` +
+      `✨ Invisible automation with visible progress\n` +
+      `🎉 Positive psychology over guilt-based motivation\n` +
+      `🤖 AI that learns and adapts to spending patterns\n` +
+      `⚡ Instant feedback loops for financial decisions`,
     isCover: false,
     separatorAfter: false
   },
@@ -703,12 +730,21 @@ function deleteAllPages(): { tempPage: PageNode } {
   // (cannot delete the currently active page)
   figma.currentPage = tempPage;
 
+  // Get all pages except the temp page
   const pagesToDelete = figma.root.children.filter(
     (child) => child.type === "PAGE" && child.id !== tempPage.id
-  );
+  ) as PageNode[];
 
+  // Delete pages safely
   for (const page of pagesToDelete) {
-    page.remove();
+    try {
+      // Make sure we're not trying to delete the current page
+      if (page.id !== figma.currentPage.id) {
+        page.remove();
+      }
+    } catch (error) {
+      console.warn(`Could not delete page "${page.name}":`, error);
+    }
   }
 
   // Return temp page so it can be deleted after first real page exists
@@ -802,15 +838,15 @@ async function generate(opts: GenerateOptions): Promise<void> {
     if (!page) {
       page = figma.createPage();
       page.name = section.pageName;
+    }
 
-      // Delete temp page after creating first real page
-      if (tempPageToDelete) {
-        // CRITICAL: Switch to the new real page BEFORE deleting temp page
-        figma.currentPage = page;
-        tempPageToDelete.remove();
-        tempPageToDelete = null;
-        console.log("Temp page deleted, now on:", page.name);
-      }
+    // Delete temp page after creating OR finding first real page
+    if (tempPageToDelete) {
+      // CRITICAL: Switch to the real page BEFORE deleting temp page
+      figma.currentPage = page;
+      tempPageToDelete.remove();
+      tempPageToDelete = null;
+      console.log("Temp page deleted, now on:", page.name);
     }
 
     // Create or find board
@@ -919,7 +955,12 @@ async function generate(opts: GenerateOptions): Promise<void> {
 // PLUGIN LIFECYCLE
 // ============================
 
-figma.showUI(__html__, { width: 380, height: 420, themeColors: true });
+// Handle menu command or show UI
+if (figma.command === 'generate') {
+  figma.showUI(__html__, { width: 380, height: 420, themeColors: true });
+} else {
+  figma.showUI(__html__, { width: 380, height: 420, themeColors: true });
+}
 
 figma.ui.onmessage = async (msg) => {
   if (msg.type === "GENERATE") {
